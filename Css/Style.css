@@ -1480,7 +1480,7 @@ h3.my_profession{
 }
 }
 
-  .circle {
+  /* .circle {
     z-index: 999;
     background-color: var(--skin-color);
     width: 20px;
@@ -1489,7 +1489,6 @@ h3.my_profession{
     backface-visibility: hidden;
     top: 50%;
     left: 50%;
-    /* pointer-events: none; */
     box-shadow: 0 0 20px var(--skin-color)
     0 0 60px var(--skin-color)
     0 0 100px var(--skin-color);
@@ -1498,15 +1497,7 @@ h3.my_profession{
     transform: translate(-50%,-50%);
     display: none;
    }
-   /* @keyframes color{
-    0%{
-        filter: hue-rotate(0deg);
-    }
-    100%{
-        filter: hue-rotate(360deg);
-
-    }
-   } */
+   
    .circle::before{
      content: '';
      position: absolute;
@@ -1519,4 +1510,4 @@ h3.my_profession{
    }
 
 
-   
+    */
