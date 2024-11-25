@@ -98,3 +98,34 @@ if(card.dataset.name === e.target.dataset.name || e.target.dataset.name ==="all"
 
 
 filtrButtons.forEach(button=> button.addEventListener("click",cards));
+
+
+
+
+
+
+
+
+
+const cursor=document.querySelector(".circle");
+var timeout;
+//cursor on move
+document.addEventListener("mousemove",(e)=>{
+    let x=e.pageX;
+    let y=e.pageY;
+    cursor.style.top=y+"px";
+    cursor.style.left=x+"px";
+    cursor.style.display="block";
+
+    //cursor effect on mouse stoped
+    function mouseStopped(){
+        cursor.style.display="none";
+    }
+    clearTimeout(timeout);
+    timeout=setTimeout(mouseStopped,1000);
+
+});
+// //cutsor effect on mouseout
+// document.addEventListener("mouseout",()=>{
+//     cursor.style.display="none";
+// });

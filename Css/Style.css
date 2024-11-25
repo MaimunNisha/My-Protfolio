@@ -1479,3 +1479,44 @@ h3.my_profession{
     padding:15px 10px 0px 10px;
 }
 }
+
+  .circle {
+    z-index: 999;
+    background-color: var(--skin-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    top: 50%;
+    left: 50%;
+    /* pointer-events: none; */
+    box-shadow: 0 0 20px var(--skin-color)
+    0 0 60px var(--skin-color)
+    0 0 100px var(--skin-color);
+    position: absolute;
+    animation: color 5s infinite;
+    transform: translate(-50%,-50%);
+    display: none;
+   }
+   /* @keyframes color{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+
+    }
+   } */
+   .circle::before{
+     content: '';
+     position: absolute;
+     background-color: var(--skin-color);
+     width: 50px;
+     height: 50px;
+     opacity: 0.2;
+     transform: translate(-30%,-30%);
+     border-radius: 50%;
+   }
+
+
+   
