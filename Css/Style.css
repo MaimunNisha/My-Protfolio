@@ -28,6 +28,7 @@ body {
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Poppins' sans-serif;
+    overflow: hidden;
 }
 
 ::before,
@@ -772,7 +773,7 @@ h3.my_profession>.typing {
 }
 
 .about .about_content .skills .skill-item .progress_in.git {
-    width: 50%;
+    width: 70%;
     animation: git 5s ease-in-out infinite;
 }
 
@@ -782,7 +783,7 @@ h3.my_profession>.typing {
     }
 
     100% {
-        width: 50%;
+        width: 70%;
     }
 }
 
@@ -1480,34 +1481,37 @@ h3.my_profession{
 }
 }
 
-  /* .circle {
-    z-index: 999;
+  .circle {
+    z-index: 1999;
     background-color: var(--skin-color);
     width: 20px;
     height: 20px;
     border-radius: 50%;
     backface-visibility: hidden;
-    top: 50%;
-    left: 50%;
+    top: 0%;
+    left: 0%;
     box-shadow: 0 0 20px var(--skin-color)
     0 0 60px var(--skin-color)
     0 0 100px var(--skin-color);
     position: absolute;
-    animation: color 5s infinite;
+    pointer-events: none;
     transform: translate(-50%,-50%);
-    display: none;
+    display: block;
+
    }
    
-   .circle::before{
-     content: '';
-     position: absolute;
-     background-color: var(--skin-color);
-     width: 50px;
-     height: 50px;
-     opacity: 0.2;
-     transform: translate(-30%,-30%);
-     border-radius: 50%;
-   }
+
+  
+  .circle::before{
+    content: '';
+    position: absolute;
+    background-color: var(--skin-color);
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-30%,-30%);
+    border-radius: 50%;
+  }
 
 
-    */
+   

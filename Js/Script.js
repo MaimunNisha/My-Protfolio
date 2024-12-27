@@ -107,25 +107,45 @@ filtrButtons.forEach(button=> button.addEventListener("click",cards));
 
 
 
-// const cursor=document.querySelector(".circle");
-// var timeout;
-// //cursor on move
-// document.addEventListener("mousemove",(e)=>{
-//     let x=e.pageX;
-//     let y=e.pageY;
-//     cursor.style.top=y+"px";
-//     cursor.style.left=x+"px";
-//     cursor.style.display="block";
+const cursor = document.querySelector(".circle");
+let timeout;
 
-//     //cursor effect on mouse stoped
-//     function mouseStopped(){
-//         cursor.style.display="none";
-//     }
-//     clearTimeout(timeout);
-//     timeout=setTimeout(mouseStopped,1000);
+// Show cursor and track mouse movement
+document.addEventListener("mousemove", (e) => {
+  const x = e.pageX;
+  const y = e.pageY;
 
-// });
-// //cutsor effect on mouseout
-// document.addEventListener("mouseout",()=>{
-//     cursor.style.display="none";
-// });
+  // Position and display cursor
+  cursor.style.top = `${y}px`;
+  cursor.style.left = `${x}px`;
+  cursor.style.display = "block";
+
+  // Reset timeout to hide cursor if movement stops
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    cursor.style.display = "none";
+  }, 1000);
+});
+
+// Hide cursor when the mouse leaves the window
+document.addEventListener("mouseout", () => {
+  cursor.style.display = "none";
+});
+
+
+
+
+function Contact(){
+let name= document.getElementById("Contact-name").value;
+let email= document.getElementById("Email-addess").value;
+let number=document.getElementById("Phone-number").value;
+let subject=document.getElementById("Subject-information").value;
+let message=document.getElementById("Message-write").value;
+console.log("Name: "+ name +"\nEmail: "+email+" \nNumber: "+number+"\nSubject: "+subject+"\nMessage: "+message);
+let send=(" Name: "+ name +"\n Email: "+email+" \n Number: "+number+"\n Subject: "+subject+"\n Message: "+message);
+
+// window.open(`https://wa.me/7238899614?text= \*\" CONTACT INFORMATION \"\* %0D%0A %0D%0A \*Name:\*  `+name+`%0D%0A \*Email:\* `+email+`%0D%0A \*Number:\* `+number+`%0D%0A \*Subject:\* `+subject+`%0D%0A \*Message:\* `+message, );
+window.open("mailto:maimunnisha.ait@gmail.com"+  "&subject=" + encodeURIComponent(subject)+ "&body=" + encodeURIComponent(send));
+
+
+}
